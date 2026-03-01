@@ -3,7 +3,7 @@ console.log("Servidor iniciando...");
 import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./config/db.js";
-import productosRoutes from "./routes/productos.routes.js";
+import productosRoutes from "./routes/producto.routes.js";
 
 dotenv.config();
 
