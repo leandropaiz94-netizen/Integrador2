@@ -4,6 +4,7 @@ import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import productosRoutes from "./routes/producto.routes.js";
+import carritoRoutes from "./routes/carrito.routes.js";
 
 dotenv.config();
 
@@ -17,8 +18,9 @@ app.get("/", (req, res) => {
   res.send("Servidor funcionando correctamente");
 });
 
-// Todas las rutas de productos
+// Rutas
 app.use("/api/productos", productosRoutes);
+app.use("/api/carrito", carritoRoutes);
 
 const PORT = process.env.PORT || 3000;
 
